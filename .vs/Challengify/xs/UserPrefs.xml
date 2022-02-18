@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{792B12E8-255D-4F8D-AAAF-275433D3CC08}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Challengify/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Challengify/Startup.cs">
     <Files>
-      <File FileName="Challengify/Models/User.cs" Line="18" Column="33" />
-      <File FileName="Challengify/Models/Achievments.cs" Line="6" Column="52" />
+      <File FileName="Challengify/Models/User.cs" Line="18" Column="31" />
+      <File FileName="Challengify/Models/Achievments.cs" Line="2" Column="1" />
       <File FileName="Challengify/Models/Challenge.cs" Line="10" Column="42" />
-      <File FileName="Challengify/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="Challengify/Controllers/HomeController.cs" Line="19" Column="10" />
+      <File FileName="Challengify/Startup.cs" Line="20" Column="52" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,9 +17,7 @@
                   <Node name="Pages" expanded="True" />
                 </Node>
               </Node>
-              <Node name="Controllers" expanded="True">
-                <Node name="HomeController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">

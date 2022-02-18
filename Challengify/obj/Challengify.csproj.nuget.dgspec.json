@@ -14,7 +14,7 @@
         "outputPath": "/Users/davidnatroshvili/Projects/Challengify/Challengify/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/davidnatroshvili/.config/NuGet/NuGet.Config"
+          "/Users/davidnatroshvili/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

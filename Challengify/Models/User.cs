@@ -15,6 +15,6 @@ namespace Challengify.Models
 
         public int XP { get; set; }
 
-        public List<Achievments> Achievments { get; set; }
+        public List<Achievment> Achievments { get; set; }
     }
 }

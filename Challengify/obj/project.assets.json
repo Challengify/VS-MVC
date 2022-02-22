@@ -7886,14 +7886,14 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/davidnatroshvili/Projects/Challengify/Challengify/Challengify.csproj",
+      "projectUniqueName": "/Users/davidnatroshvili/Projects/VS-MVC/Challengify/Challengify.csproj",
       "projectName": "Challengify",
-      "projectPath": "/Users/davidnatroshvili/Projects/Challengify/Challengify/Challengify.csproj",
+      "projectPath": "/Users/davidnatroshvili/Projects/VS-MVC/Challengify/Challengify.csproj",
       "packagesPath": "/Users/davidnatroshvili/.nuget/packages/",
-      "outputPath": "/Users/davidnatroshvili/Projects/Challengify/Challengify/obj/",
+      "outputPath": "/Users/davidnatroshvili/Projects/VS-MVC/Challengify/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/davidnatroshvili/.nuget/NuGet/NuGet.Config"
+        "/Users/davidnatroshvili/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

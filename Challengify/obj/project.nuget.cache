@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/8N/tnSJnTMkwJmZIToM4JojDcqsdB7Z5u84Qco60EJ1IdlImt0K/H1JWQsU8dSaMBFwz+DprWCsTm7SEElvpw==",
+  "dgSpecHash": "RqWyOVqStZuCU/vKQK9qwd8Ubch4UbJHfFRNdpDTJS7O8+GgHFumlZa3MIjEOMlcH25OQbTi01chYVDm9jVKgA==",
   "success": true,
-  "projectFilePath": "/Users/davidnatroshvili/Projects/Challengify/Challengify/Challengify.csproj",
+  "projectFilePath": "/Users/davidnatroshvili/Projects/VS-MVC/Challengify/Challengify.csproj",
   "expectedPackageFiles": [
     "/Users/davidnatroshvili/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/davidnatroshvili/.nuget/packages/microsoft.aspnetcore.cryptography.internal/5.0.13/microsoft.aspnetcore.cryptography.internal.5.0.13.nupkg.sha512",

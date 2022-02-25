@@ -14,7 +14,7 @@
         "outputPath": "/Users/davidnatroshvili/Projects/VS-MVC/Challengify/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/davidnatroshvili/.config/NuGet/NuGet.Config"
+          "/Users/davidnatroshvili/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -69,8 +69,10 @@
               "version": "[5.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.13, )"
+              "version": "[5.0.14, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

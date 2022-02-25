@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Challengify.Models;
+using Challengify.Models.Repositories;
 
 namespace Challengify.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+
+        private readonly Repository _repository;
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -20,7 +23,8 @@ namespace Challengify.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var model = _repository.GetUsers();
+            return View(model);
         }
 
         public IActionResult Privacy()

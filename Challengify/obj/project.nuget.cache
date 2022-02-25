@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RqWyOVqStZuCU/vKQK9qwd8Ubch4UbJHfFRNdpDTJS7O8+GgHFumlZa3MIjEOMlcH25OQbTi01chYVDm9jVKgA==",
+  "dgSpecHash": "CHPNUs/b4DQIh0ktX78FSnzSoH74P5w19Rr10SsrDuHNtHAuCeyoyXZhhUHBAcyEkR3bp0ZxwsJD3c7gLZKHqw==",
   "success": true,
   "projectFilePath": "/Users/davidnatroshvili/Projects/VS-MVC/Challengify/Challengify.csproj",
   "expectedPackageFiles": [
@@ -36,7 +36,7 @@
     "/Users/davidnatroshvili/.nuget/packages/microsoft.entityframeworkcore.sqlite/5.0.13/microsoft.entityframeworkcore.sqlite.5.0.13.nupkg.sha512",
     "/Users/davidnatroshvili/.nuget/packages/microsoft.entityframeworkcore.sqlite.core/5.0.13/microsoft.entityframeworkcore.sqlite.core.5.0.13.nupkg.sha512",
     "/Users/davidnatroshvili/.nuget/packages/microsoft.entityframeworkcore.sqlserver/5.0.14/microsoft.entityframeworkcore.sqlserver.5.0.14.nupkg.sha512",
-    "/Users/davidnatroshvili/.nuget/packages/microsoft.entityframeworkcore.tools/5.0.13/microsoft.entityframeworkcore.tools.5.0.13.nupkg.sha512",
+    "/Users/davidnatroshvili/.nuget/packages/microsoft.entityframeworkcore.tools/5.0.14/microsoft.entityframeworkcore.tools.5.0.14.nupkg.sha512",
     "/Users/davidnatroshvili/.nuget/packages/microsoft.extensions.caching.abstractions/5.0.0/microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "/Users/davidnatroshvili/.nuget/packages/microsoft.extensions.caching.memory/5.0.0/microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "/Users/davidnatroshvili/.nuget/packages/microsoft.extensions.configuration.abstractions/5.0.0/microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",

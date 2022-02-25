@@ -5,7 +5,7 @@ namespace Challengify.Models
 {
     public class User
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public string Username { get; set; }
 
@@ -15,6 +15,6 @@ namespace Challengify.Models
 
         public int XP { get; set; }
 
-        public List<Achievment> Achievments { get; set; }
+        //public List<Achievment> Achievments { get; set; }
     }
 }

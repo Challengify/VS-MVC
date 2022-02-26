@@ -12,6 +12,7 @@ using Challengify.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Challengify.Models.Repositories;
 
 namespace Challengify
 {
@@ -28,6 +29,8 @@ namespace Challengify
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddTransient<Repository>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(

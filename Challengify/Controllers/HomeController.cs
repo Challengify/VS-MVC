@@ -16,9 +16,10 @@ namespace Challengify.Controllers
 
         private readonly Repository _repository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, Repository repository)
         {
             _logger = logger;
+            _repository = repository;
         }
 
         public IActionResult Index()

@@ -25,7 +25,7 @@ namespace Challengify.Controllers
         public IActionResult Index()
         {
             var model = _repository.GetUsers();
-            return View(model);
+            return View(model.ToList());
         }
 
         public IActionResult Privacy()

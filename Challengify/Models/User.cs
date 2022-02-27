@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace Challengify.Models
 {
-    public class User
+    [Table("User")]
+    public class User : IdentityUser
     {
-        public Guid Id { get; set; }
+        // public Guid Id { get; set; }
 
         public string Username { get; set; }
 
-        public string Email { get; set; }
+        //public string Email { get; set; }
 
         public bool IsSubcriber { get; set; }
 

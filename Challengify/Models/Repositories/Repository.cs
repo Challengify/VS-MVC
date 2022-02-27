@@ -12,10 +12,10 @@ namespace Challengify.Models.Repositories
 
         public IQueryable<User> GetUsers() => _context.DbUsers.OrderBy(x => x.Username);
 
-        public User GetUserById(Guid id) => _context.DbUsers.Single(x => x.Id == id);
+        public User GetUserById(string id) => _context.DbUsers.Single(x => x.Id == id);
 
         public IQueryable<Challenge> GetChallenges() => _context.DbChallenges.OrderBy(x => x.Name);
 
-        public Challenge GetChallengeById(Guid id) => _context.DbChallenges.Single(x => x.Id == id);
+        public Challenge GetChallengeById(string id) => _context.DbChallenges.Single(x => x.Id == id);
     }
 }

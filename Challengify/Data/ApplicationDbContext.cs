@@ -27,7 +27,7 @@ namespace Challengify.Data
 
             builder.Entity<User>().HasData(new User
             {
-                Id = Guid.NewGuid(),
+                Id = "testIdUser",
                 Username = "nickname",
                 Email = "mail@mail.com",
                 IsSubcriber = false,
@@ -36,7 +36,7 @@ namespace Challengify.Data
 
             builder.Entity<Challenge>().HasData(new Challenge
             {
-                Id = Guid.NewGuid(),
+                Id = "testIdChallenge",
                 Name = "challenge name",
                 Image = "c:/asdmks/",
                 ShortDescription = "short description",

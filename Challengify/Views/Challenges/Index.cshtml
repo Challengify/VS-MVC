@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Challenge>
+@{
+    ViewData["Title"] = "Challenges";
+}
+
+<h1 class="display-4">Список челленджей</h1>
+
+@foreach (var challenge in Model)
+{
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">@challenge.Name</h5>
+            <h5 class="card-title">@challenge.Id</h5>
+        </div>
+        <div class="card-footer">
+            <h5 class="card-title">@challenge.FullDescription</h5>
+            <small class="text-muted">
+                <a href="/challenge/@challenge.Id/">Перейти в карточку товара</a>
+            </small>
+        </div>
+    </div>
+}

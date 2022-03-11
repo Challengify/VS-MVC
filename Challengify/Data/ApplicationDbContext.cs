@@ -12,11 +12,54 @@ namespace Challengify.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+            Challenges = new List<Challenge>();
+            Challenges.Add(new Challenge
+            {
+                Id = "1",
+                Name = "pushups",
+                Image = "c:/asdmks/",
+                ShortDescription = "updown",
+                FullDescription = "up and down",
+                MaxParticipants = 3,
+                SumOfXP = 10
+            });
+            Challenges.Add(new Challenge
+            {
+                Id = "2",
+                Name = "waterbottleflip challenge",
+                Image = "c:/asdmks/",
+                ShortDescription = "flip",
+                FullDescription = "flip-flop",
+                MaxParticipants = 5,
+                SumOfXP = 20
+            });
+            Users = new List<User>();
+            Users.Add(new User
+            {
+                //Id = "testIdUser",
+                Username = "artem777",
+                Email = "artem@mail.com",
+                UserChallenges = new List<Challenge>(),
+                IsSubcriber = false,
+                XP = 0
+            });
+            Users.Add(new User
+            {
+                //Id = "testIdUser",
+                Username = "vladimir191",
+                Email = "vladimir@mail.com",
+                UserChallenges = new List<Challenge>(),
+                IsSubcriber = false,
+                XP = 0
+            });
         }
 
         public DbSet<User> DbUsers { get; set; }
 
         public DbSet<Challenge> DbChallenges { get; set; }
+
+        public List<Challenge> Challenges;
+        public new List<User> Users;
 
         //protected override void OnConfiguring(DbContextOptionsBuilder options)
         //    => options.UseSqlite("Data Source=app.db");
@@ -27,10 +70,10 @@ namespace Challengify.Data
 
             builder.Entity<User>().HasData(new User
             {
-                Id = "testIdUser",
+                //Id = "testIdUser",
                 Username = "nickname",
                 Email = "mail@mail.com",
-                IsSubcriber = false,
+                //IsSubcriber = false,
                 XP = 0
             });
 

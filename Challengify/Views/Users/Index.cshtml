@@ -1,0 +1,22 @@
+﻿@model IEnumerable<User>
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h1 class="display-4">Список пользователей</h1>
+
+@foreach (var user in Model)
+{
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">@user.Email</h5>
+            <h5 class="card-title">@user.XP</h5>
+        </div>
+        <div class="card-footer">
+            <h5 class="card-title">@user.Username</h5>
+            <small class="text-muted">
+                <a href="/users/@user.Username/">Перейти в профиль</a>
+            </small>
+        </div>
+    </div>
+}

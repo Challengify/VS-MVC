@@ -1,0 +1,12 @@
+﻿@model User
+@{
+    ViewData["Title"] = Model.Username;
+}
+<div class="text-center">
+    <h1 class="display-4">@Model.Username</h1>
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text">@Model.Email </p>
+        </div>
+    </div>
+</div>

@@ -20,7 +20,7 @@ namespace Challengify.Controllers
         }
 
         [Route("users/{Username}")]
-        public IActionResult User(string Username) =>
-            View("ViewItem", _repository.GetUsers().First(x => x.Username == Username));
+        public new IActionResult User(string Username) =>
+            View("ViewItem", _repository.GetUsers().First(x => x.Email == Username));
     }
 }

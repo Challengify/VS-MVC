@@ -1377,3 +1377,4 @@ D:\GitHub\Challengify\Challengify\obj\Debug\net5.0\Razor\Views\Challenges\Index.
 D:\GitHub\Challengify\Challengify\obj\Debug\net5.0\Razor\Views\Users\Index.cshtml.g.cs
 D:\GitHub\Challengify\Challengify\obj\Debug\net5.0\Razor\Views\Challenges\ViewItem.cshtml.g.cs
 D:\GitHub\Challengify\Challengify\obj\Debug\net5.0\Razor\Views\Users\ViewItem.cshtml.g.cs
+D:\GitHub\Challengify\Challengify\obj\Debug\net5.0\Razor\Views\Challenges\New.cshtml.g.cs

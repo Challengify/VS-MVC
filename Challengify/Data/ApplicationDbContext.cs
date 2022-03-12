@@ -37,7 +37,7 @@ namespace Challengify.Data
             Users.Add(new User
             {
                 //Id = "testIdUser",
-                Username = "artem777",
+                UserName = "artem777",
                 Email = "artem@mail.com",
                 UserChallenges = new List<Challenge>(),
                 IsSubcriber = false,
@@ -46,7 +46,7 @@ namespace Challengify.Data
             Users.Add(new User
             {
                 //Id = "testIdUser",
-                Username = "vladimir191",
+                UserName = "vladimir191",
                 Email = "vladimir@mail.com",
                 UserChallenges = new List<Challenge>(),
                 IsSubcriber = false,
@@ -70,8 +70,8 @@ namespace Challengify.Data
 
             builder.Entity<User>().HasData(new User
             {
-                //Id = "testIdUser",
-                Username = "nickname",
+                Id = "testIdUser",
+                UserName = "nickname",
                 Email = "mail@mail.com",
                 //IsSubcriber = false,
                 XP = 0

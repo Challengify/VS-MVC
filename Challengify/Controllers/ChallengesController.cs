@@ -1,4 +1,5 @@
-﻿using Challengify.Models.Repositories;
+﻿using Challengify.Models;
+using Challengify.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -22,5 +23,14 @@ namespace Challengify.Controllers
         [Route("challenge/{id}")]
         public IActionResult Challenge(string id) =>
             View("ViewItem", _repository.GetChallenges().First(x => x.Id == id));
+
+        [HttpGet]
+        public IActionResult New()
+        {
+            Challenge challenge = new Challenge();
+            return View(challenge);
+        }
+
+
     }
 }

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -11,8 +12,9 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Challenges" asp-action="Index">Challengify</a>
-                <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action="Index">Profile</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action="Index">Challengify</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action=@User.Identity.Name>Profile</a>
+
             </div>
         </nav>
     </header>

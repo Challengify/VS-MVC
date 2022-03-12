@@ -20,5 +20,7 @@ namespace Challengify.Models
 
         public List<User> Participants { get; set; }
 
+        public Challenge() { }
+
     }
 }

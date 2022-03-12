@@ -40,6 +40,17 @@ namespace Challengify.Controllers
             return View("ViewItem", _repository.GetChallenges().First(x => x.Id == challenge.Id));
         }
 
+        [HttpPost]
+        public void Join(string Id)
+        {
+            Challenge challenge = _repository.GetChallenges().FirstOrDefault(x => x.Id == Id);
+            string name = User.Identity.Name;
+            challenge.Participants
+                .Add(_repository.GetUsers().First(x => x.Email == name));
+        }
+
+
+
 
     }
 }

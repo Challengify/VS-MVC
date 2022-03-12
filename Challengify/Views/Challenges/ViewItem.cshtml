@@ -6,7 +6,16 @@
     <h1 class="display-4">@Model.Id</h1>
     <div class="card">
         <div class="card-body">
-            <p class="card-text">@Model.FullDescription</p>
+            <p class="card-text">@User.Identity.Name</p>
+            @{
+                if(!Model.Participants.Exists(x => x.UserName == User.Identity.Name))
+                {
+                    @using (Html.BeginForm("Join", "Challenges", FormMethod.Post))
+                    {
+                        <button name="Id" value=Model.Id> Вступить </button>
+                    }
+                }
+            }
         </div>
     </div>
 </div>

@@ -1,4 +1,5 @@
-﻿using Challengify.Models.Repositories;
+﻿using Challengify.Models;
+using Challengify.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -20,7 +21,8 @@ namespace Challengify.Controllers
         }
 
         [Route("users/{Username}")]
-        public new IActionResult User(string Username) =>
+        public new IActionResult Profile(string Username) =>
             View("ViewItem", _repository.GetUsers().First(x => x.Email == Username));
+
     }
 }

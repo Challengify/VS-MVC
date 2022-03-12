@@ -1,21 +1,9 @@
-﻿@model Challenge
-@{
-    ViewData["Title"] = "New Challenge";
+﻿@using(Html.BeginForm("New", "Challenges", FormMethod.Post))
+{
+    <table>
+        <p>Name: <input name="Name" /></p>
+        <p>Description: <input name="Desc"/></p>
+        <p>Count: <input name="Count" type="number" /></p>
+        <input type="submit" value="Send" />
+    </table>
 }
-
-<h1 class="display-4">Новый Челлендж</h1>
-
-<div class="card">
-    <div class="card-body">
-        <label asp-for="Name">Name:</label>
-        <input asp-for="Name" class="form-control" placeholder="Введите название" value="@Model.Name" />
-
-        <label asp-for="ShortDescription">Description:</label>
-        <input asp-for="ShortDescription" class="form-control" placeholder="Введите описание" value="@Model.ShortDescription" />
-
-        <label asp-for="MaxParticipants">Число участников:</label>
-        <input asp-for="MaxParticipants" class="form-control" placeholder="Введите число участников" value="@Model.MaxParticipants" />
-        <button action="" type="submit" class="btn btn-primary">Submit</button>
-
-    </div>
-</div>

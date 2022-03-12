@@ -1,6 +1,7 @@
 ﻿using Challengify.Models;
 using Challengify.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Challengify.Controllers
@@ -17,7 +18,8 @@ namespace Challengify.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View(_repository.GetChallenges());
+            IEnumerable<Challenge> challenges = _repository.GetChallenges();
+            return View(challenges);
         }
 
         [Route("challenge/{id}")]
@@ -25,10 +27,17 @@ namespace Challengify.Controllers
             View("ViewItem", _repository.GetChallenges().First(x => x.Id == id));
 
         [HttpGet]
-        public IActionResult New()
+        public ActionResult New()
         {
-            Challenge challenge = new Challenge();
-            return View(challenge);
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult New(string Name, string Desc, int Count)
+        {
+            Challenge challenge = new Challenge() { Name = Name, FullDescription = Desc, ShortDescription = Desc, Participants = new List<User>(), SumOfXP = 0, MaxParticipants = Count, Id = "123", Image = "IMG" };
+            _repository.AddChallenge(challenge);
+            return View("ViewItem", _repository.GetChallenges().First(x => x.Id == challenge.Id));
         }
 
 

@@ -12,7 +12,6 @@ namespace Challengify.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-            Challenges = new List<Challenge>();
             Challenges.Add(new Challenge
             {
                 Id = "1",
@@ -21,8 +20,9 @@ namespace Challengify.Data
                 ShortDescription = "updown",
                 FullDescription = "up and down",
                 MaxParticipants = 3,
-                SumOfXP = 10
-            });
+                SumOfXP = 10,
+                Participants = new List<User>()
+            }) ;
             Challenges.Add(new Challenge
             {
                 Id = "2",
@@ -31,8 +31,9 @@ namespace Challengify.Data
                 ShortDescription = "flip",
                 FullDescription = "flip-flop",
                 MaxParticipants = 5,
-                SumOfXP = 20
-            });
+                SumOfXP = 20,
+                Participants = new List<User>()
+            }) ;
             Users = new List<User>();
             Users.Add(new User
             {
@@ -52,13 +53,14 @@ namespace Challengify.Data
                 IsSubcriber = false,
                 XP = 0
             });
+            
         }
 
         public DbSet<User> DbUsers { get; set; }
 
         public DbSet<Challenge> DbChallenges { get; set; }
 
-        public List<Challenge> Challenges;
+        public List<Challenge> Challenges = new List<Challenge>();
         public new List<User> Users;
 
         //protected override void OnConfiguring(DbContextOptionsBuilder options)

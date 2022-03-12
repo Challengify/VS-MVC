@@ -15,5 +15,7 @@ namespace Challengify.Models.Repositories
 
         public IEnumerable<Challenge> GetChallenges() => _context.Challenges.OrderBy(x => x.Name);
 
+        public void AddChallenge(Challenge challenge) => _context.Challenges.Add(challenge);
+
     }
 }

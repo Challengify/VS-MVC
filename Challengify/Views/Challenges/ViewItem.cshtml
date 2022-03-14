@@ -2,20 +2,107 @@
 @{
     ViewData["Title"] = Model.Name;
 }
-<div class="text-center">
-    <h1 class="display-4">@Model.Id</h1>
-    <div class="card">
-        <div class="card-body">
-            <p class="card-text">@User.Identity.Name</p>
-            @{
-                if(!Model.Participants.Exists(x => x.UserName == User.Identity.Name))
-                {
-                    @using (Html.BeginForm("Join", "Challenges", FormMethod.Post))
-                    {
-                        <button name="Id" value=Model.Id> Вступить </button>
+@section Styles {
+    <link href="~/css/challenge.css" rel="stylesheet" type="text/css" />
+}
+<div class="main-content container-fluid">
+    <h1 class="main-content__challenge-heading">@Model.Name</h1>
+    <div class="challenge-details row">
+        <div class="challenge-details__rectangle-block col-auto">
+            <time-chart percent="43"></time-chart>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-6">
+            <div class="challenge-details__challenge-info">
+                <h3 class="challenge-details__group-name">Группа <a href="#">Nike Winter</a></h3>
+                <div class="group-details__extra">
+                    <span class="group-details__participants">Участников <span>@Model.Participants.Count</span></span>
+                    <div class="group-details__time-left-block">
+                        <span class="group-details__time-left">Осталось <span>10 дн. 22 ч.</span></span>
+                    </div>
+                </div>
+                <p class="challenge-details__description">
+                    @Model.FullDescription
+                </p>
+                <div class="challenge-details__buttons-block">
+                    @{
+                        if (!Model.Participants.Exists(x => x.UserName == User.Identity.Name))
+                        {
+                            @using (Html.BeginForm("Join", "Challenges", FormMethod.Post))
+                            {
+                                <div class="my-button">Подписаться</div>
+                            }
+                        }
                     }
-                }
-            }
+                    <div class="my-button">Настройки</div>
+                </div>
+            </div>
+        </div>
+        <div class="challenge-details__social-block col-sm-12 col-lg-3">
+            <h2 class="challenge-details__social-heading">Социальные сети</h2>
+            <div class="challenge-details__social-flex-block">
+                <div class="challenge-detail__social"><i class="fab fa-twitter"></i></div>
+                <div class="challenge-detail__social"><i class="fab fa-instagram"></i></div>
+                <div class="challenge-detail__social"><i class="fab fa-youtube"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-content__results-heading-block">
+        <h2 class="main-content__results-heading">Мои результаты</h2>
+        <a class="main-content__plus-block" href="#">+</a>
+    </div>
+    <div class="results-block row">
+        <div class="results-block__place-block col-auto">
+            <span class="results-block__place">123</span>
+        </div>
+        <div class="results-block__username-block col-sm-4 col-md-4 col-lg-4">
+            <a href="profile.html" class="results-block__username">Владимир Блейк</a>
+        </div>
+        <div class="results-block__result-block col-lg-2">
+            <span class="results-block__result-label">Результат</span>
+            <span class="results-block__result-span">120 км</span>
+        </div>
+        <div class="results-block__xp-flex-block col-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="results-block__xp-block">
+                <span class="results-block__xp-label">XP</span>
+                <div class="results-block__xp-bar-group">
+                    <xp-bar percent="80"></xp-bar>
+                    <span>320/400</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="results-block__place-label">место</span>
+    <h2 class="main-content__table-heading">Таблица</h2>
+    <!-- Participant 1 -->
+    <div class="person-res row">
+        <div class="col-9 col-sm-6 col-md-5 col-lg-4 flex align-items-center">
+            <div class="person-res__participant-block">
+                <span class="person-res__label">Участник</span>
+                <a class="person-res__participant-name">Дима Дмитриев</a>
+            </div>
+        </div>
+        <div class="col-3 person-res__place-group col-sm-2 col-md-2 col-lg-2 col-xl-3 flex align-items-center">
+            <div class="person-res__place-block">
+                <span class="person-res__label">Место</span>
+                <span class="person-res__place">1</span>
+            </div>
+        </div>
+        <div class="person-res__result-group col-lg-2 flex align-items-center">
+            <div class="person-res__results-block">
+                <span class="person-res__label">Результат</span>
+                <h4 class="person-res__result">120 км</h4>
+            </div>
+        </div>
+        <div class="person-res__xp-group col-sm-4 col-md-3 col-lg-4 col-xl-3 flex align-items-center">
+            <div class="person-res__xp-block">
+                <span class="person-res__xp-label">XP</span>
+                <div class="person-res__xp-bar-group">
+                    <xp-bar percent="40"></xp-bar>
+                    <span>250/400</span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<script src="~/js/xp_bar.js"></script>
+<script src="~/js/time_chart.js"></script>

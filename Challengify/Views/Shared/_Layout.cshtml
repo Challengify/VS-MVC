@@ -5,30 +5,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Challengify</title>
+    <link rel="icon" href="~/img/icon.svg">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/styles.css" type="text/css" />
+    @RenderSection("Styles", false)
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action="Index">Challengify</a>
-                <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action=@User.Identity.Name>Profile</a>
-
-            </div>
-        </nav>
+    <header class="header container-fluid flex">
+        <menu class="flex justify-content-between align-items-center col-12">
+            @if (ViewData["Title"] == "Home Page")
+            {
+                <li class="menu-item"><a asp-controller="Home" asp-action="Index">Главная</a></li>
+            }
+            else
+            {
+                <li class="menu-item-logo"><a asp-controller="Home" asp-action="Index">Challengify</a></li>
+            }
+            <li class="menu-item"><a asp-controller="Users" asp-action=@User.Identity.Name>Профиль</a></li>
+        </menu>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - Challengify - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    @RenderBody()
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

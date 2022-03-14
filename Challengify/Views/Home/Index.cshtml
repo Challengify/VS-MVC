@@ -2,6 +2,21 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-                        <partial name="_LoginPartial" />
+@section Styles {
+    <link href="~/css/main.css" rel="stylesheet" type="text/css" />
+}
+
+<div class="right-polygon"></div>
+<div class="main-content flex flex-column justify-content-around">
+    <div class="main-content__main-block">
+        <div class="main-content__main-block-rotated"></div>
+        <h1 class="main-content__heading">Challengify</h1>
+        <p class="main-content__description">Приложение для участия в групповых и <br class="main-content__description-br">индивидуальных челленджах.</p>
+        <a href="auth.html" class="my-button main-content__button"><span>Регистрация</span></a>
+        <a href="auth.html" class="my-button"><span>Вход</span></a>
+    </div>
+    <div class="main__content__bottom-btn-block">
+        <img class="main-content__down-arrow" src="~/img/down-arrow.png" alt="Down arrow">
+        <a class="main-content__top-challenges-btn" href="#">Смотреть топ челленджей</a>
+    </div>
 </div>

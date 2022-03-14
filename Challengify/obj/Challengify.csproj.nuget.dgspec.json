@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vladimirryabtsev/Desktop/HSE/Challengify/Git/Challengify/Challengify/Challengify.csproj": {}
+    "/Users/davidnatroshvili/Desktop/VS-MVC/Challengify/Challengify.csproj": {}
   },
   "projects": {
-    "/Users/vladimirryabtsev/Desktop/HSE/Challengify/Git/Challengify/Challengify/Challengify.csproj": {
+    "/Users/davidnatroshvili/Desktop/VS-MVC/Challengify/Challengify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vladimirryabtsev/Desktop/HSE/Challengify/Git/Challengify/Challengify/Challengify.csproj",
+        "projectUniqueName": "/Users/davidnatroshvili/Desktop/VS-MVC/Challengify/Challengify.csproj",
         "projectName": "Challengify",
-        "projectPath": "/Users/vladimirryabtsev/Desktop/HSE/Challengify/Git/Challengify/Challengify/Challengify.csproj",
-        "packagesPath": "/Users/vladimirryabtsev/.nuget/packages/",
-        "outputPath": "/Users/vladimirryabtsev/Desktop/HSE/Challengify/Git/Challengify/Challengify/obj/",
+        "projectPath": "/Users/davidnatroshvili/Desktop/VS-MVC/Challengify/Challengify.csproj",
+        "packagesPath": "/Users/davidnatroshvili/.nuget/packages/",
+        "outputPath": "/Users/davidnatroshvili/Desktop/VS-MVC/Challengify/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/vladimirryabtsev/.config/NuGet/NuGet.Config"
+          "/Users/davidnatroshvili/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -97,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/5.0.404/RuntimeIdentifierGraph.json"
         }
       }
     }

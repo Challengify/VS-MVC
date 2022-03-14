@@ -1,9 +1,18 @@
-﻿@using(Html.BeginForm("New", "Challenges", FormMethod.Post))
-{
-    <table>
-        <p>Name: <input name="Name" /></p>
-        <p>Description: <input name="Desc"/></p>
-        <p>Count: <input name="Count" type="number" /></p>
-        <input type="submit" value="Send" />
-    </table>
+﻿@{
+    ViewData["Title"] = "Создать челлендж";
 }
+@section Styles {
+    <link href="~/css/add_challenge.css" rel="stylesheet" type="text/css" />
+}
+<div class="main-content container-fluid">
+    <h1 class="main-content__add-heading">Создать челлендж</h1>
+    <div class="row main-content__inputs">
+        @using (Html.BeginForm("New", "Challenges", FormMethod.Post))
+        {
+            <input type="text" name="Name" placeholder="Название" class="inputs__input">
+            <input type="text" name="Count" placeholder="Макс. участников" class="inputs__input">
+            <textarea name="Desc" type="text" class="inputs__input">Полное описание</textarea>
+            <button class="my-button" type="submit">Добавить</button>
+        }
+    </div>
+</div>

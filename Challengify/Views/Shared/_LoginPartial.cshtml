@@ -6,14 +6,14 @@
     <link href="~/css/main.css" rel="stylesheet" type="text/css" />
 }
 
-<ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
-    <li class="nav-item">
-        <a  class="nav-link text-dark" asp-area="" asp-controller="Challenges" asp-action="Index" title="Manage">Hello @User.Identity.Name!</a>
-        <a class="navbar-brand" asp-area="" asp-controller="Challenges" asp-action="New">New</a>
-        <a class="navbar-brand" asp-area="" asp-controller="Challenges" asp-action="Index">Challenges</a>
-    </li>
+    <div class="main-content__main-block">
+        <div class="main-content__main-block-rotated"></div>
+        <h1 class="main-content__heading">Challengify</h1>
+        <p class="main-content__description">Приложение для участия в групповых и <br class="main-content__description-br">индивидуальных челленджах.</p>
+        <a class="my-button main-content__button" asp-controller="Users" asp-action=@User.Identity.Name><span>Профиль</span></a>
+    </div>
 }
 else
 {   
@@ -25,6 +25,5 @@ else
         <a class="my-button" asp-area="Identity" asp-page="/Account/Login"><span>Вход</span></a>
     </div>
 }
-</ul>
 
 

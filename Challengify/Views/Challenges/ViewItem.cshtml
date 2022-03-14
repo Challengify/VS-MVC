@@ -29,7 +29,9 @@
                         {
                             @using (Html.BeginForm("Join", "Challenges", FormMethod.Post))
                             {
-                                <div class="my-button">Подписаться</div>
+                                <input type="hidden" name="Id" value="@Model.Id" />
+                                <input type="hidden" name="name" value="@User.Identity.Name" />
+                                <button type="submit" class="my-button" asp-controller="Challenges" asp-action="Join">Подписаться</button>
                             }
                         }
                     }

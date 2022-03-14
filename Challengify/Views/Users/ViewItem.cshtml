@@ -2,11 +2,84 @@
 @{
     ViewData["Title"] = Model.UserName;
 }
-<div class="text-center">
-    <h1 class="display-4">@Model.UserName</h1>
-    <div class="card">
-        <div class="card-body">
-            <p class="card-text">@Model.Email </p>
+@section Styles {
+    <link href="~/css/profile.css" rel="stylesheet" type="text/css" />
+}
+<div class="main-content container-fluid">
+    <h1 class="main-content__profile-heading">Мой профиль</h1>
+    <div class="profile-details row">
+        <div class="profile-details__level-block col-auto">
+            <div class="profile-details__level-rectangle">
+                <span class="profile-details__level">1</span>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-6">
+            <div class="profile-details__user-details">
+                <div class="profile-details__username-block">
+                    <h3 class="profile-details__username">
+                        @Model.UserName
+                    </h3>
+                    <div class="profile-details__level-rectangle-small">
+                        <span class="profile-details__level-small">1</span>
+                    </div>
+                </div>
+                <h4 class="profile-details__user-type">
+                    Обычный пользователь
+                </h4>
+                <span class="profile-details__level-text">Уровень <span>1</span></span>
+                <span class="profile-details__xp"><span>@Model.XP</span> XP</span>
+                <div class="profile-details__buttons-block">
+                    <div class="my-button">Настройки</div>
+                </div>
+            </div>
+        </div>
+        <div class="profile-details__achievment-block col-sm-12 col-lg-3">
+            <h2 class="profile-details__achievments-heading">Достижения</h2>
+            <div class="profile-details__achievments-flex-block">
+                <div class="profile-detail__achievment"><span>A</span></div>
+                <div class="profile-detail__achievment"><span>S</span></div>
+                <div class="profile-detail__achievment"><span>1</span></div>
+            </div>
         </div>
     </div>
+    <div class="main-content__challenges-heading-block">
+        <h2 class="main-content__challenges-heading">Челленджи</h2>
+        <a class="main-content__plus-block" asp-controller="Challenges" asp-action="New">+</a>
+    </div>
+    @if(Model.UserChallenges != null)
+    {
+        @foreach(var challenge in Model.UserChallenges)
+        {
+            <div class="challenge row">
+                <div class="col-6 col-md-4 col-lg-4 flex align-items-center">
+                    <div class="challenge__challenge-block">
+                        <span class="challenge__label">Название</span>
+                        <a class="challenge__name">@challenge.Name</a>
+                    </div>
+                </div>
+                <div class="challenge__group-group col-md-4 col-lg-3 flex align-items-center">
+                    <div class="challenge__group-block">
+                        <span class="challenge__label">Группа</span>
+                        <a class="challenge__group-name">Nike Winter</a>
+                    </div>
+                </div>
+                <div class="challenge__result-group col-lg-2 flex align-items-center">
+                    <div class="challenge__results-block">
+                        <span class="challenge__label">Результат</span>
+                        <h4 class="challenge__result">120 км</h4>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 flex align-items-center">
+                    <div class="challenge__xp-block">
+                        <span class="challenge__xp-label">XP</span>
+                        <div class="challenge__xp-bar-group">
+                            <xp-bar percent="40"></xp-bar>
+                            <span>250/400</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
 </div>
+<script src="~/js/xp_bar.js"></script>

@@ -41,16 +41,13 @@ namespace Challengify.Controllers
         }
 
         [HttpPost]
-        public void Join(string Id)
+        public IActionResult Join(string Id, string name)
         {
             Challenge challenge = _repository.GetChallenges().FirstOrDefault(x => x.Id == Id);
-            string name = User.Identity.Name;
             challenge.Participants
-                .Add(_repository.GetUsers().First(x => x.Email == name));
+                .Add(_repository.GetUsers().First(x => x.UserName == name));
+            return Redirect($"/challenge/{Id}");
         }
-
-
-
 
     }
 }

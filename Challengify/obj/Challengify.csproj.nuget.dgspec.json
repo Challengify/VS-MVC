@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\Challengify\\Challengify\\Challengify.csproj": {}
+    "/Users/vladimirryabtsev/Desktop/HSE/Challengify/Git/Challengify/Challengify/Challengify.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\Challengify\\Challengify\\Challengify.csproj": {
+    "/Users/vladimirryabtsev/Desktop/HSE/Challengify/Git/Challengify/Challengify/Challengify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Challengify\\Challengify\\Challengify.csproj",
+        "projectUniqueName": "/Users/vladimirryabtsev/Desktop/HSE/Challengify/Git/Challengify/Challengify/Challengify.csproj",
         "projectName": "Challengify",
-        "projectPath": "D:\\GitHub\\Challengify\\Challengify\\Challengify.csproj",
-        "packagesPath": "C:\\Users\\malan\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Challengify\\Challengify\\obj\\",
+        "projectPath": "/Users/vladimirryabtsev/Desktop/HSE/Challengify/Git/Challengify/Challengify/Challengify.csproj",
+        "packagesPath": "/Users/vladimirryabtsev/.nuget/packages/",
+        "outputPath": "/Users/vladimirryabtsev/Desktop/HSE/Challengify/Git/Challengify/Challengify/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\malan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/vladimirryabtsev/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -103,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
         }
       }
     }

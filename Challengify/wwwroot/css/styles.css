@@ -78,6 +78,8 @@ h1, h2, h3, h4, h5, h6 {
 .my-button {
     font-size: 18px;
     font-weight: 400;
+    border: none !important;
+    outline: none;
     background: #EEE9FA;
     color: #858585;
     text-transform: uppercase;

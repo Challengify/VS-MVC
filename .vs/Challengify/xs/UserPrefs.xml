@@ -1,29 +1,51 @@
 ﻿<Properties StartupConfiguration="{792B12E8-255D-4F8D-AAAF-275433D3CC08}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Challengify/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Challengify/Views/Challenges/Index.cshtml">
     <Files>
-      <File FileName="Challengify/Models/User.cs" Line="1" Column="1" />
-      <File FileName="Challengify/wwwroot/css/styles.css" Line="27" Column="37" />
-      <File FileName="Challengify/Views/Home/Index.cshtml" Line="1" Column="3" />
-      <File FileName="Challengify/Views/Home/Privacy.cshtml" Line="1" Column="3" />
-      <File FileName="Challengify/Views/Shared/_Layout.cshtml" Line="8" Column="30" />
-      <File FileName="Challengify/Views/Challenges/ViewItem.cshtml" Line="26" Column="63" />
-      <File FileName="Challengify/Models/Challenge.cs" Line="5" Column="18" />
-      <File FileName="Challengify/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="Challengify/Views/Shared/_LoginPartial.cshtml" Line="1" Column="1" />
+      <File FileName="Challengify/wwwroot/css/styles.css" Line="83" Column="17" />
+      <File FileName="Challengify/Views/Home/Index.cshtml" />
+      <File FileName="Challengify/Views/Home/Privacy.cshtml" />
+      <File FileName="Challengify/Views/Challenges/ViewItem.cshtml" Line="32" Column="61" />
+      <File FileName="Challengify/Controllers/HomeController.cs" />
+      <File FileName="Challengify/Views/Shared/_LoginPartial.cshtml" Line="15" Column="129" />
+      <File FileName="Challengify/Views/Shared/_Layout.cshtml" Line="24" Column="91" />
+      <File FileName="Challengify/Controllers/UsersController.cs" />
+      <File FileName="Challengify/Views/Users/ViewItem.cshtml" Line="47" Column="71" />
+      <File FileName="Challengify/Data/ApplicationDbContext.cs" Line="1" Column="1" />
+      <File FileName="Challengify/Models/Challenge.cs" Line="1" Column="1" />
+      <File FileName="Challengify/Controllers/ChallengesController.cs" Line="27" Column="62" />
+      <File FileName="Challengify/Views/Challenges/New.cshtml" />
+      <File FileName="Challengify/wwwroot/css/challenge.css" />
+      <File FileName="Challengify/Models/Repositories/Repository.cs" Line="16" Column="39" />
+      <File FileName="Challengify/Views/Challenges/Index.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Challengify" expanded="True">
             <Node name="Challengify" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="HomeController.cs" selected="True" />
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Pages" expanded="True" />
+                </Node>
               </Node>
-              <Node name="Models" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Repositories" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
+                <Node name="Challenges" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+                <Node name="Home" expanded="True" />
                 <Node name="Shared" expanded="True" />
                 <Node name="Users" expanded="True" />
               </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>

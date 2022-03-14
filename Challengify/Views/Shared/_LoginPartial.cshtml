@@ -2,6 +2,10 @@
 @inject SignInManager<User> SignInManager
 @inject UserManager<User> UserManager
 
+@section Styles {
+    <link href="~/css/main.css" rel="stylesheet" type="text/css" />
+}
+
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
@@ -12,12 +16,15 @@
     </li>
 }
 else
-{
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </li>
+{   
+    <div class="main-content__main-block">
+        <div class="main-content__main-block-rotated"></div>
+        <h1 class="main-content__heading">Challengify</h1>
+        <p class="main-content__description">Приложение для участия в групповых и <br class="main-content__description-br">индивидуальных челленджах.</p>
+        <a class="my-button main-content__button" asp-area="Identity" asp-page="/Account/Register"><span>Регистрация</span></a>
+        <a class="my-button" asp-area="Identity" asp-page="/Account/Login"><span>Вход</span></a>
+    </div>
 }
 </ul>
+
+

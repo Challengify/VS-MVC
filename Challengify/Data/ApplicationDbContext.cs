@@ -56,6 +56,11 @@ namespace Challengify.Data
             
         }
 
+        public ApplicationDbContext()
+        {
+            
+        }
+
         public DbSet<User> DbUsers { get; set; }
 
         public DbSet<Challenge> DbChallenges { get; set; }
@@ -63,8 +68,8 @@ namespace Challengify.Data
         public List<Challenge> Challenges = new List<Challenge>();
         public new List<User> Users;
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder options)
-        //    => options.UseSqlite("Data Source=app.db");
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+            => options.UseSqlite("Data Source=app.db");
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

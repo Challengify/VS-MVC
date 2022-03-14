@@ -15,7 +15,7 @@
             <div class="challenge-details__challenge-info">
                 <h3 class="challenge-details__group-name">Группа <a href="#">Nike Winter</a></h3>
                 <div class="group-details__extra">
-                    <span class="group-details__participants">Участников <span>@Model.Participants.Count</span></span>
+                    <span class="group-details__participants">Участников <span>@(Model.Participants == null ? 0 : Model.Participants.Count)</span></span>
                     <div class="group-details__time-left-block">
                         <span class="group-details__time-left">Осталось <span>10 дн. 22 ч.</span></span>
                     </div>
@@ -25,7 +25,7 @@
                 </p>
                 <div class="challenge-details__buttons-block">
                     @{
-                        if (!Model.Participants.Exists(x => x.UserName == User.Identity.Name))
+                        if (Model.Participants == null || !Model.Participants.Exists(x => x.UserName == User.Identity.Name))
                         {
                             @using (Html.BeginForm("Join", "Challenges", FormMethod.Post))
                             {

@@ -1,4 +1,5 @@
-﻿using Challengify.Models;
+﻿using Challengify.Data;
+using Challengify.Models;
 using Challengify.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
@@ -8,6 +9,7 @@ namespace Challengify.Controllers
     public class UsersController : Controller
     {
         private readonly Repository _repository;
+        ApplicationDbContext db = new ApplicationDbContext();
 
         public UsersController(Repository repository)
         {
@@ -17,12 +19,12 @@ namespace Challengify.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View(_repository.GetUsers());
+            return View(db.DbUsers);
         }
 
         [Route("users/{Username}")]
         public new IActionResult Profile(string Username) =>
-            View("ViewItem", _repository.GetUsers().First(x => x.Email == Username));
+            View("ViewItem", db.DbUsers.First(x => x.Email == Username));
 
     }
 }

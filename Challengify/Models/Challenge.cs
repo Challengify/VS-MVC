@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Challengify.Models
 {
+    [Table("Challenge")]
     public class Challenge
     {
         public string Id { get; set; }
